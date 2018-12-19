@@ -14,7 +14,7 @@ import HomeFooter from './component/footer'
 export default {
   name: 'HelloWorld',
   components : {
-      HomeHeader,HomeGuide,HomeFooter
+      HomeHeader, HomeGuide, HomeFooter
   }
 }
 </script>

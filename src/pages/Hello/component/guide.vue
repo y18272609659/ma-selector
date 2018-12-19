@@ -10,7 +10,7 @@
                 <div class="content">
                     <ul>
                         <li>1.写出目前面对的难题，如：晚餐吃什么？</li>
-                        <li>2.列出关于问题的解决选项，如：火锅、拉面...</li>
+                        <li>2.列出关于问题可供选择的解决方案，如：火锅、拉面...</li>
                         <li>3.列出左右你做出选择的相关因素，并按重要性排序，如：距离、价格、味道</li>
                         <li>4.对选项的每个相关因素进行打分，如，火锅：味道 8分</li>
                         <li>5.生成分析报告</li>
@@ -69,7 +69,8 @@
             box-shadow: 0 12px 16px 0 rgba(0,0,0,0.20),0 17px 50px 0 rgba(0,0,0,0.15)
         .goon
             margin-top 40px
-            margin-bottom 20px
+            margin-bottom 60px
             min-height 200px
             padding 15px
+            padding-bottom 30px
 </style>

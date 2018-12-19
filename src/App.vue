@@ -1,18 +1,15 @@
 <template>
   <div>
-    <hello-world></hello-world>
+      <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './pages/Hello/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+    import router from './router'
+    export default {
+        name: 'App',
+        router
+    }
 </script>
 
 <style scoped>

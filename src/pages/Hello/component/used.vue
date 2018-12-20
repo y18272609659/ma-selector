@@ -29,7 +29,6 @@
 </template>
 
 <script>
-    import store from '../../../store'
     export default {
         name: 'Used',
         data () {
@@ -62,9 +61,13 @@
                 this.factor = [];
             },
             handleSubmitAll () {
-                store.saveOne(this.question);
-                store.saveTwo(this.list);
-                store.saveThree(this.factor);
+                if (this.question.length>1 & this.list.length>1 & this.factor.length>1 ) {
+                    localStorage.setItem('question', this.question);
+                    localStorage.setItem('list', JSON.stringify(this.list));
+                    localStorage.setItem('factor', JSON.stringify(this.factor));
+                } else {
+                    alert('Woo!表格还没有填完，不要心急啊！')
+                }
             }
         },
     }

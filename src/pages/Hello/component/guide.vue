@@ -59,9 +59,10 @@
             line-height 25px
             font-size 18px
         .go
+            display block
             width 100px
             height 50px
-            margin-top 20px
+            margin 20px auto
             padding 2px
             border-radius 20px
             font-size 24px

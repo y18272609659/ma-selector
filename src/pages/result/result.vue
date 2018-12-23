@@ -55,7 +55,7 @@
 <style lang="stylus" scoped>
     .background
         overflow hidden
-        min-height 506px
+        min-height 80.83vh
         background #e8e8e8
         .content
             overflow hidden

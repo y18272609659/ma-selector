@@ -86,7 +86,7 @@ import HomeFooter from '../Hello/component/footer'
 <style lang="stylus" scoped>
     .content
         overflow hidden
-        min-height 506px
+        min-height 80.83vh
         background #e8e8e8
         .question
             text-align center

@@ -46,8 +46,8 @@
 <style lang="stylus" scoped>
     .guide
         overflow hidden
-        min-height 506px
-        padding 0px 40px
+        min-height 80.83vh
+        padding 0 40px
         background cadetblue
         color white
         .title

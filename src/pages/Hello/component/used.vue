@@ -19,6 +19,8 @@
                     <li v-for="(item , index) of factor" :key="index">{{index+1}}. {{item}}</li>
                 </ul>
             </div>
+        </div>
+        <div class="flex">
             <button @click="handleDelete" class="clear">清空</button>
             <button @click="handleSubmitAll" class="start">
                 <!--<a href="/testing" class="header-hello">开始</a>-->
@@ -81,23 +83,26 @@
         font-weight bold
         border 2px solid white
         line-height 3
+        /*.flex*/
+            /*display grid*/
+            /*margin-top 10px*/
+            /*.Opt*/
+                /*grid-column-start: 2*/
+                /*grid-column-end: 4*/
+            /*.Fat*/
+                /*grid-column-start: 6*/
+                /*grid-column-end: 8*/
+            /*.start*/
+                /*grid-column-start: 6*/
+                /*grid-row-start: 2*/
+            /*.clear*/
+                /*grid-column-start: 3*/
+                /*grid-row-start: 2*/
         .flex
-            display grid
-            margin-top 10px
-            .Opt
-                grid-column-start: 2
-                grid-column-end: 4
-            .Fat
-                grid-column-start: 6
-                grid-column-end: 8
-            .start
-                grid-column-start: 6
-                grid-row-start: 2
-            .clear
-                grid-column-start: 3
-                grid-row-start: 2
+            display flex
+            justify-content space-around
         .question
-            width 500px
+            width 72.5vw
             border 1px solid gainsboro
             border-radius 5px
             color #434343
@@ -133,7 +138,8 @@
         .start:hover,
         .clear:hover
             box-shadow: 0 12px 16px 0 rgba(0,0,0,0.20),0 17px 50px 0 rgba(0,0,0,0.15)
-        .goto
+        .goto ,
+        .clear
             color #5a5a5a
             font-weight bold
     </style>

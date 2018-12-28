@@ -72,13 +72,25 @@ import HomeFooter from '../Hello/component/footer'
                 }
             },
             // 该函数检测表格是否填写完，若没填写完，则给用户一个alert弹窗提示。（其功能待完善)
-            handleReport () {
-                if ( this.allNumber.length === this.list.length) {
-                    localStorage.setItem('allNumber',JSON.stringify(this.allNumber))
+            // handleReport () {
+            //     if ( this.allNumber.length === this.list.length) {
+            //         localStorage.setItem('allNumber',JSON.stringify(this.allNumber))
+            //     } else {
+            //         alert('Woo！表格还剩' + (this.list.length-this.allNumber.length) +'项没有填完？不要心急呀！')
+            //     }
+            // },
+        },
+        beforeRouteLeave (to, from , next) {
+            if( this.allNumber.length !== this.list.length ) {
+                const answer = window.confirm('喂！Σ(っ°Д°;)っ！表格还剩' + (this.list.length-this.allNumber.length) + '项没有填完!')
+                if (answer) {
+                    next()
                 } else {
-                    alert('Woo！表格还剩' + (this.list.length-this.allNumber.length) +'项没有填完？不要心急呀！')
+                    next(false)
                 }
-            },
+            } else {
+                next(true)
+            }
         }
     }
 </script>

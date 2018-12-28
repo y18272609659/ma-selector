@@ -23,7 +23,6 @@
         <div class="flex">
             <button @click="handleDelete" class="clear">清空</button>
             <button @click="handleSubmitAll" class="start">
-                <!--<a href="/testing" class="header-hello">开始</a>-->
                 <router-link to="/testing" class="goto">开始</router-link>
             </button>
         </div>
@@ -39,7 +38,7 @@
                 inputValueOne: '',
                 inputValueTwo: '',
                 list: [],
-                factor: []
+                factor: [],
             }
         },
         watch: {
@@ -63,13 +62,15 @@
                 this.factor = [];
             },
             handleSubmitAll () {
-                if (this.question.length>1 & this.list.length>1 & this.factor.length>1 ) {
+                if (this.question.length>1 & this.list.length>1 && this.factor.length>1 ) {
                     localStorage.setItem('question', this.question);
                     localStorage.setItem('list', JSON.stringify(this.list));
                     localStorage.setItem('factor', JSON.stringify(this.factor));
-                } else {
-                    alert('Woo!表格还没有填完，不要心急啊！')
+                    this.$emit('begin',this.question,this.list,)
                 }
+                // else {
+                //     alert('Woo!表格还没有填完，不要心急啊！')
+                // }
             }
         },
     }

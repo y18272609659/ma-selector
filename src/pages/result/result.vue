@@ -81,6 +81,10 @@
             .oblong
                 margin-left 10px
                 display inline-block
-                background cadetblue
+                background -webkit-linear-gradient(left top, skyblue , cadetblue); /* Safari 5.1 - 6.0 */
+                background -o-linear-gradient(bottom right, skyblue , cadetblue); /* Opera 11.1 - 12.0 */
+                background -moz-linear-gradient(bottom right, skyblue , cadetblue); /* Firefox 3.6 - 15 */
+                background linear-gradient(to bottom right, skyblue , cadetblue); /* 标准的语法 */
+                border-radius 10px
                 height 16px
 </style>
